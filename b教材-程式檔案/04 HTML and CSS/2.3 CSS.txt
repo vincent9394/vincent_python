@@ -1,0 +1,496 @@
+<!--************* CSS Selector, selecting all *****************-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+	
+	* {
+		color: red;
+	}
+	
+	</style>
+</head>
+
+<body>
+
+	<h1>Header #1</h1>
+	<h2>Header #2</h2>
+	<h3>Header #3</h3>
+	<h4>Header #4</h4>
+	
+</body>
+</html>
+
+<!--************* CSS Selector, by tag *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+	
+	h1 {
+		color: red;
+	}
+	
+	</style>
+</head>
+
+<body>
+
+	<h1>Header #1</h1>
+	<h2>Header #2</h2>
+	<h3>Header #3</h3>
+	<h4>Header #4</h4>
+	
+</body>
+</html>
+
+<!--************* CSS Selector, selecting id *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+	
+	#special {
+		color:red;
+	}
+	
+	</style>
+</head>
+
+<body>
+
+	<h1>Header #1</h1>
+	<h2>Header #2</h2>
+	<h3 id="special">Header #3</h3>
+	<h4>Header #4</h4>
+	
+</body>
+</html>
+
+
+
+
+
+<!--************* CSS Selector, selecting class *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+	
+	.special {
+		color: red;
+	}
+	
+	</style>
+</head>
+
+<body>
+
+	<h1>Header #1</h1>
+	<h2 class="special">Header #2</h2>
+	<h3 class="special">Header #3</h3>
+	<h4>Header #4</h4>
+	
+</body>
+</html>
+
+
+
+
+<!--************* 屬性 CSS Selectors *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+	
+		[href="abc.com"]{color: red;}  
+		[href*="abc.com"]{color: red;} 
+		[href^="abc.com"]{color: red;} 
+		[href$="abc.com"]{color: red;}
+		
+	</style>
+</head>
+
+<body>
+
+	<a href="abc.com">abc.com</a>
+	<a href="www.abc.com">www.abc.com</a>
+	<a href="bbc.com">bbc.com</a>
+	<a href="abc.com.hk">abc.com.hk</a>
+	
+</body>
+</html>
+
+
+
+<!--************* 組合 CSS Selectors *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+	
+	h1.dog {
+		color: red;
+	}
+	h1, p {
+		color: red;
+	} 
+	
+	</style>
+</head>
+
+<body>
+
+	<h1 class="dog">dog1</h1>
+	<p class="dog">dog2</p>
+	
+</body>
+</html>
+
+
+<!--************* 父子 CSS Selectors *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+	
+	div span {
+		color:red;
+	}  
+	div > span {
+		color: red;
+	} 
+	
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<span>span1</span>
+		<span>span2</span>
+		<p>
+			<span>span3</span>
+		</p>
+	</div>
+	<span>span4</span>
+	
+</body>
+</html>
+
+
+<!--*************  姊妹 CSS Selectors  *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+	
+	div ~ span {
+		color: red;
+	}
+	
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<span>span1</span>
+	</div>
+	<p>paragraph</p>
+	<span>span2</span>
+	<span>span3</span>
+	
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+
+	div + span {
+		color: red;
+	}
+
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<span>span1</span>
+	</div>
+	<span>span2</span>
+	<span>span3</span>
+
+</body>
+</html>
+
+
+
+<!--*************  條件 CSS Selectors  *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+
+	div:not(.dog) {
+		color: red;
+	}
+	
+	</style>
+</head>
+
+<body>
+
+	<div>div1</div>
+	<div class="cat">div_cat</div>
+	<div class="dog">div_dog</div>
+
+</body>
+</html>
+
+
+
+<!--*************  指定第 n 個子元素  *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+
+	div span:nth-child(2) {
+		color:red;
+	}
+	
+	div span:nth-of-type(2) {
+		color:red;
+	}  
+
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<div>div</div>
+		<span>span1</span>
+		<span>span2</span>
+	</div>
+
+</body>
+</html>
+
+
+
+<!--*************  :nth-child(an+b)  *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+
+	div span:nth-child(2n){color:red;}  
+	div span:nth-child(2n+1){color:red;}  
+	div span:nth-child(2n-1){color:red;}  
+	div span:nth-child(-n+2){color:red;}  
+
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<span>span1</span>
+		<span>span2</span>
+		<span>span3</span>
+		<span>span4</span>
+	</div>
+
+</body>
+</html>
+
+
+
+
+<!--*************  :nth-of-tyope(an+b)  *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+
+	div span:nth-of-type(2n){color:red;}  
+	div span:nth-of-type(2n+1){color:red;}  
+	div span:nth-of-type(2n-1){color:red;}  
+	div span:nth-of-type(-n+2){color:red;}  
+
+	</style>
+</head>
+
+<body>
+
+<div>
+    <div></div>
+    <span>span1</span>
+    <span>span2</span>
+    <span>span3</span>
+    <span>span4</span>
+</div>
+
+</body>
+</html>
+
+
+
+
+<!--*************  :nth-child()其他語法  *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+
+	div span:first-child{color:red;}  
+	div span:last-child{color:red;}  
+	div span:nth-last-child(2){color:red;}  
+
+	</style>
+</head>
+
+<body>
+
+<div>
+    <span>span1</span>
+    <span>span2</span>
+</div>
+
+</body>
+</html>
+
+
+
+<!--*************  :nth-of-type()其他語法  *****************-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+
+	div span:first-of-type{color:red;}  
+	div span:last-of-type{color:red;}  
+	div span:nth-last-of-type(2){color:red;}  
+
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<div>div</div>
+		<span>span1</span>
+		<span>span2</span>
+	</div>
+
+</body>
+</html>
+
+
+
+
+<!--*************  CSS Selectors 例子  *****************-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+
+	#student p:first-of-type a {
+		color: red;
+	}  
+
+	</style>
+</head>
+
+<body>
+
+	<div id="student">
+		<p>
+			<a href="abc.com">abc.com</a>
+			<a href="abc2.com">abc2.com</a>
+			<a href="abc3.com">abc3.com</a>
+		</p>
+		<p>
+			<a href="abc4.com">abc4.com</a>
+			<a href="abc5.com">abc5.com</a>
+			<a href="abc6.com">abc6.com</a>
+		</p>
+	</div>
+	<p>
+		<a href="abc7.com">abc7.com</a>
+	</p>
+
+
+</body>
+</html>
+
+
+
+
+<!--*************  練習  *****************-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!--using css selectors-->
+	<style>
+
+
+
+
+	</style>
+</head>
+
+<body>
+
+	<div id="student">
+		<p class="animal dog">
+			<a href="abc.com">abc.com</a>
+			<a href="abc2.com">abc2.com</a>
+			<a href="abc3.com">abc3.com</a>
+		</p>
+		<p class="animal">
+			<a href="abc4.com">abc4.com</a>
+			<a href="abc5.com">abc5.com</a>
+			<a href="abc6.com">abc6.com</a>
+		</p>
+	</div>
+	<p class="dog">
+		<a href="abc7.com">abc7.com</a>
+	</p>
+	<p class="cat">
+		<a href="abc8.com">abc8.com</a>
+	</p>
+
+</body>
+</html>
+
+
+
+
